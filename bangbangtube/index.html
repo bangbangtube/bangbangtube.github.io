@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BangBangTube - Home</title>
   <link rel="stylesheet" href="assets/css/style.css">
+<script>
+if (localStorage.getItem('bbt_allowed') !== '1') {
+  location.href = '/disclaimer.html';
+}
+</script>
 </head>
 <body>
   <!-- Header -->
