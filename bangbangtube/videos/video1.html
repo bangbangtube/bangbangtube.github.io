@@ -1,58 +1,32 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>JUDUL_VIDEO - BangBangTube</title>
-  <meta name="description" content="DESKRIPSI SINGKAT VIDEO">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <title>Sample Video - BangBangTube</title>
+  <link rel="stylesheet" href="/bangbangtube/assets/css/style.css">
 </head>
 <body>
+  <script>
+    if (localStorage.getItem('bbt_allowed') !== '1') {
+      location.href = '/bangbangtube/disclaimer.html';
+    }
+  </script>
+
   <header>
-    <a href="/"><h1 class="logo">BangBang<span>Tube</span></h1></a>
+    <a href="/bangbangtube/"><h1 class="logo">BangBang<span>Tube</span></h1></a>
   </header>
 
-  <main class="video-page">
-    <nav class="breadcrumbs"><a href="/">Home</a> › <a href="/videos/">Videos</a> › JUDUL_VIDEO</nav>
-
-    <section class="player-area">
-      <!-- Poster overlay (klik untuk load video) -->
-      <div id="poster" class="video-poster" style="background-image:url('/assets/img/thumbnails/POSTER.jpg')">
-        <button id="playBtn" class="btn-play">▶ Play</button>
-      </div>
-
-      <!-- Actual video (hidden until play) -->
-      <video id="player" controls preload="metadata" style="display:none; max-width:100%; width:100%;">
-        <source src="CDN_VIDEO_URL.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
-    </section>
-
-    <section class="meta">
-      <h1>JUDUL_VIDEO</h1>
-      <p class="desc">DESKRIPSI LENGKAP VIDEO — tambahkan kata kunci long-tail di sini.</p>
-
-      <div class="affiliate">
-        <a href="AFFILIATE_LINK" target="_blank" rel="noopener noreferrer" class="btn-cta">Watch Live Cams</a>
-      </div>
-    </section>
-
-    <div class="ads">[ AD SLOT ]</div>
+  <main style="padding:20px;max-width:800px;margin:auto;">
+    <h2>Sample Video Title</h2>
+    <video width="100%" controls poster="/bangbangtube/assets/img/thumb1.jpg">
+      <source src="https://cdn.yoursite.com/video1.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
   </main>
 
   <footer>
-    <p>&copy; 2025 BangBangTube — <a href="/disclaimer.html">Disclaimer</a> | <a href="/privacy.html">Privacy</a></p>
+    <p>&copy; 2025 BangBangTube</p>
   </footer>
-
-  <script>
-    // Play-on-click: mencegah autoplay (aman dan lebih ramah GitHub)
-    document.getElementById('playBtn').addEventListener('click', function(){
-      document.getElementById('poster').style.display = 'none';
-      var v = document.getElementById('player');
-      v.style.display = 'block';
-      v.play().catch(()=>{ /* ignore autoplay errors */ });
-    });
-  </script>
 </body>
 </html>
