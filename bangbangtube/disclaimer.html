@@ -1,1 +1,37 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BangBangTube — 18+ Only</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    body {display:flex;justify-content:center;align-items:center;height:100vh;background:#111;color:#fff;}
+    .box {text-align:center;max-width:400px;padding:20px;background:#1a1a1a;border-radius:10px;}
+    .box h1 {color:#e50914;margin-bottom:10px;}
+    .box p {margin-bottom:20px;}
+    .btn {padding:10px 20px;border:none;border-radius:5px;cursor:pointer;font-weight:bold;}
+    .enter {background:#e50914;color:#fff;margin-right:10px;}
+    .leave {background:#444;color:#fff;}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>BangBangTube</h1>
+    <p>This site contains adult content. You must be 18+ to enter.</p>
+    <button id="enterBtn" class="btn enter">I am 18+ — Enter</button>
+    <button onclick="location.href='https://www.google.com'" class="btn leave">Leave</button>
+  </div>
+
+  <script>
+    if (localStorage.getItem('bbt_allowed') === '1') {
+      location.href = '/';
+    }
+    document.getElementById('enterBtn').addEventListener('click', function(){
+      localStorage.setItem('bbt_allowed','1');
+      location.href = '/';
+    });
+  </script>
+</body>
+</html>
