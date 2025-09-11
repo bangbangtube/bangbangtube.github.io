@@ -1,51 +1,47 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BangBangTube - Home</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-<script>
-if (localStorage.getItem('bbt_allowed') !== '1') {
-  location.href = '/disclaimer.html';
-}
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BangBangTube - Free Videos</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/bangbangtube/assets/css/style.css">
+
+  <!-- SEO -->
+  <meta name="description" content="BangBangTube - Watch free videos online. Only 18+ viewers allowed.">
 </head>
 <body>
-  <!-- Header -->
+  <!-- Age Gate Redirect -->
+  <script>
+    if (localStorage.getItem('bbt_allowed') !== '1') {
+      location.href = '/bangbangtube/disclaimer.html';
+    }
+  </script>
+
   <header>
     <h1 class="logo">BangBang<span>Tube</span></h1>
   </header>
 
-  <!-- Iklan atas -->
-  <div class="ads">[ Banner Iklan 728x90 ]</div>
-
-  <!-- Grid Video -->
-  <main class="video-grid">
-    <a href="videos/video1.html" class="video-card">
-      <img src="assets/img/thumbnails/thumb1.jpg" alt="Video 1">
-      <h3>Hot Video 1</h3>
-    </a>
-    <a href="videos/video2.html" class="video-card">
-      <img src="assets/img/thumbnails/thumb2.jpg" alt="Video 2">
-      <h3>Hot Video 2</h3>
-    </a>
-    <a href="videos/video3.html" class="video-card">
-      <img src="assets/img/thumbnails/thumb3.jpg" alt="Video 3">
-      <h3>Hot Video 3</h3>
-    </a>
-    <!-- Tambah video card lainnya di sini -->
+  <main>
+    <h2>Latest Videos</h2>
+    <div class="video-grid">
+      <a href="/bangbangtube/videos/video1.html" class="video-card">
+        <img src="/bangbangtube/assets/img/thumb1.jpg" alt="Video 1">
+        <p>Sample Video Title</p>
+      </a>
+      <a href="/bangbangtube/videos/video2.html" class="video-card">
+        <img src="/bangbangtube/assets/img/thumb2.jpg" alt="Video 2">
+        <p>Another Hot Clip</p>
+      </a>
+    </div>
   </main>
 
-  <!-- Iklan bawah -->
-  <div class="ads">[ Banner Iklan 728x90 ]</div>
-
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 BangBangTube | 
-      <a href="disclaimer.html">Disclaimer</a> | 
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="/bangbangtube/disclaimer.html">Disclaimer</a> | 
+      <a href="/bangbangtube/privacy.html">Privacy Policy</a> | 
+      <a href="/bangbangtube/blog/">Blog</a>
     </p>
   </footer>
 </body>
