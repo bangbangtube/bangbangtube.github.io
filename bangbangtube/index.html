@@ -1,48 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>BangBangTube - Free Videos</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="/bangbangtube/assets/css/style.css">
-
-  <!-- SEO -->
-  <meta name="description" content="BangBangTube - Watch free videos online. Only 18+ viewers allowed.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bbt</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
 <body>
-  <!-- Age Gate Redirect -->
-  <script>
-    if (localStorage.getItem('bbt_allowed') !== '1') {
-      location.href = '/bangbangtube/disclaimer.html';
-    }
-  </script>
-
-  <header>
-    <h1 class="logo">BangBang<span>Tube</span></h1>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo.svg" alt="bbt logo">
+    </div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Long</a>
+      <a href="#">Short</a>
+      <a href="#">Populer</a>
+      <a href="#">Blog</a>
+      <input type="text" placeholder="Search...">
+    </nav>
+    <div class="menu-icon">
+      <img src="assets/menu.svg" alt="menu">
+    </div>
   </header>
 
-  <main>
-    <h2>Latest Videos</h2>
-    <div class="video-grid">
-      <a href="/bangbangtube/videos/video1.html" class="video-card">
-        <img src="/bangbangtube/assets/img/thumb1.jpg" alt="Video 1">
-        <p>Sample Video Title</p>
-      </a>
-      <a href="/bangbangtube/videos/video2.html" class="video-card">
-        <img src="/bangbangtube/assets/img/thumb2.jpg" alt="Video 2">
-        <p>Another Hot Clip</p>
-      </a>
-    </div>
-  </main>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>The Superhero</h1>
+    <button>Watch Now</button>
+  </section>
 
+  <!-- LATEST MOVIES -->
+  <section class="movies">
+    <h2>Latest Movies</h2>
+    <div class="movie-grid">
+      <div class="movie-card">
+        <img src="https://via.placeholder.com/300x400" alt="Action">
+        <h3>Action Heroes</h3>
+        <p>Action, Adventure</p>
+      </div>
+      <div class="movie-card">
+        <img src="https://via.placeholder.com/300x400" alt="Love">
+        <h3>Love Untold</h3>
+        <p>Romance, Drama</p>
+      </div>
+      <div class="movie-card">
+        <img src="https://via.placeholder.com/300x400" alt="Thriller">
+        <h3>The Escape</h3>
+        <p>Thriller</p>
+      </div>
+      <div class="movie-card">
+        <img src="https://via.placeholder.com/300x400" alt="Comedy">
+        <h3>Comedy Night</h3>
+        <p>Comedy</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 BangBangTube | 
-      <a href="/bangbangtube/disclaimer.html">Disclaimer</a> | 
-      <a href="/bangbangtube/privacy.html">Privacy Policy</a> | 
-      <a href="/bangbangtube/blog/">Blog</a>
-    </p>
+    <p>© 2025 bbt | Privacy Policy | Disclaimer</p>
   </footer>
+
+  <script>
+    // Toggle menu mobile
+    const menuIcon = document.querySelector('.menu-icon');
+    const navLinks = document.querySelector('.nav-links');
+    menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
