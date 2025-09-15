@@ -1,65 +1,115 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #000;
-  color: #fff;
-}
-
-header {
+  font-family: Arial, Helvetica, sans-serif;
   background: #111;
-  padding: 15px;
-  text-align: center;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
   color: #fff;
 }
-.logo span { color: #e50914; }
 
-main {
-  padding: 20px;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #000;
 }
 
-h2 {
-  margin-bottom: 15px;
-  border-bottom: 2px solid #e50914;
-  display: inline-block;
-  padding-bottom: 5px;
+.logo img {
+  height: 40px;
 }
 
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 15px;
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.video-card {
-  background: #1a1a1a;
-  border-radius: 8px;
-  overflow: hidden;
+.nav-links a {
+  color: #fff;
   text-decoration: none;
+}
+
+.nav-links input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon img {
+  width: 28px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #ff3b3b, #ff7b00);
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 10px 20px;
+  background: #111;
+  border: none;
   color: #fff;
-  transition: transform 0.2s;
-}
-.video-card:hover { transform: scale(1.05); }
-
-.video-card img {
-  width: 100%;
-  display: block;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.video-card p {
+.movies {
+  padding: 40px 20px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  background: #222;
   padding: 10px;
-  font-size: 14px;
+  border-radius: 8px;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
 }
 
 footer {
-  background: #111;
   text-align: center;
-  padding: 15px;
-  margin-top: 20px;
+  padding: 20px;
+  background: #000;
+  color: #777;
 }
-footer a { color: #e50914; text-decoration: none; margin: 0 5px; }
-footer a:hover { text-decoration: underline; }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
